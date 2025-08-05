@@ -35,8 +35,15 @@
       });
   }*/
 
+const usernameInput = document.getElementById('usernameInput');
+usernameInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        searchUser(); 
+    }
+});
+
 async function searchUser() {
-    const usernameInput = document.getElementById("usernameInput");
+    // const usernameInput = document.getElementById("usernameInput");
     const card = document.getElementById("profileCard");
     const username = usernameInput.value.trim();
     if (!username) {
